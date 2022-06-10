@@ -22,15 +22,32 @@ const arr = [1, 2, 3, 4];
 let myName = {
   firstName: "Srimal",
   lastName: "Priyanga",
-  printFullName: function () {
-    console.log(this.firstName + " " + this.lastName);
+  printFullName: function (town, year) {
+    console.log(this.firstName + " " + this.lastName + " " + town + year);
   },
 };
 
-let otherName = {
-  firstName: "I",
-  lastName: "am",
+const printFullName = function (town, year) {
+  console.log(this.firstName + " " + this.lastName + " " + town + year);
 };
 
-myName.printFullName();
-myName.printFullName.call(otherName);
+let friendName = {
+  firstName: "Alex",
+  lastName: "Rox",
+};
+
+let studentName = {
+  firstName: "Bob",
+  lastName: "Allen",
+};
+
+myName.printFullName("City", 2012);
+// Function burrowing
+myName.printFullName.call(friendName, "Maharagama", 2013);
+myName.printFullName.apply(studentName, ["Colombo", 2016]); // arguments as array
+
+// bind
+myName.printFullName.bind();
+const output = myName.printFullName.bind(friendName, "New York", 2020);
+console.log(output);
+output();
