@@ -19,38 +19,6 @@ const arr = [1, 2, 3, 4];
 // //   }, [])
 // // );
 
-// let myName = {
-//   firstName: "Srimal",
-//   lastName: "Priyanga",
-//   printFullName: function (town, year) {
-//     console.log(this.firstName + " " + this.lastName + " " + town + year);
-//   },
-// };
-
-// const printFullName = function (town, year) {
-//   console.log(this.firstName + " " + this.lastName + " " + town + year);
-// };
-
-// let friendName = {
-//   firstName: "Alex",
-//   lastName: "Rox",
-// };
-
-// let studentName = {
-//   firstName: "Bob",
-//   lastName: "Allen",
-// };
-
-// myName.printFullName("City", 2012);
-// // Function burrowing
-// myName.printFullName.call(friendName, "Maharagama", 2013);
-// myName.printFullName.apply(studentName, ["Colombo", 2016]); // arguments as array
-
-// // bind
-// myName.printFullName.bind();
-// const output = myName.printFullName.bind(friendName, "New York", 2020);
-// console.log(output);
-// output();
 
 const inst = {
   key: "Va",
