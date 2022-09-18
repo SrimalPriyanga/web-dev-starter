@@ -32,6 +32,6 @@ printFullName.apply(studentName, ["Colombo", 2016]); // arguments as array
 // bind
 myName.printFullName.bind();
 
-const output = printFullName.bind(friendName, "New York", 2020);
-console.log(output); // this is the function which can invoke later
-output(); // Calling when it needed
+const outputFndName = printFullName.bind(friendName, "New York", 2020);
+console.log(outputFndName); // this is the function which can invoke later
+outputFndName(); // Calling when it needed

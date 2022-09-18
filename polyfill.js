@@ -35,7 +35,7 @@ function printName3(method) {
   );
 }
 
-Function.prototype.mybind = function (...params) {
+Function.prototype.myBind = function (...params) {
   let fun = this,
     params2 = params.slice(1);
   return function () {
@@ -43,6 +43,27 @@ Function.prototype.mybind = function (...params) {
   };
 };
 
-let polyfillmyBind = printName3.mybind(me, "callingToMyBind");
-console.log(polyfillmyBind);
-polyfillmyBind();
+let polyFillMyBind = printName3.myBind(me, "callingToMyBind");
+console.log(polyFillMyBind);
+polyFillMyBind();
+
+//4
+function printName4(method) {
+  return console.log(
+    `4.${method} My name is ${this.firstName} ${this.lastName}`
+  );
+}
+Function.prototype.myCall = function (context, ...args) {
+  context.myFn = this;
+  context.myFn(...args);
+};
+
+Function.prototype.myCall2 = function (...params) {
+  let self = params[0];
+    self.fun = this;
+    params2 = params.slice(1);
+  self.fun([params2]);
+};
+
+printName4.myCall(me, "callingToMyCall");
+printName4.myCall2(imal, "callingToMyCall2");
