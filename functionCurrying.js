@@ -16,7 +16,7 @@ multiplyBy3(10); // access and call that function passing more params
 multiplyBy3(9); // access and call that function passing more different params
 
 /**
- *
+ * Using closures
  * @param {*} num1 closure function param
  * @returns a function including outer function's lexical scope value(num1).
  * The return function console log multiplication of num1 & num2
