@@ -20,17 +20,3 @@ const arr = [1, 2, 3, 4];
 // // );
 
 
-const inst = {
-  key: "Va",
-  __proto__: {
-    bar_prop: "bar val",
-    __proto__: {
-      foo_prop: "foo val",
-      // This can be omitted
-      __proto__: Object.prototype,
-    },
-  },
-};
-console.log(inst.foo_prop);
-console.log(inst.bar_prop);
-console.log(inst);
